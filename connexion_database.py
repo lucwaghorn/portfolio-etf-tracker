@@ -1,5 +1,6 @@
 import yfinance as yf
 import psycopg2
+import os
 from datetime import datetime
 
 HOST = os.getenv("SUPABASE_HOST")
