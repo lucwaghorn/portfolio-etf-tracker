@@ -8,6 +8,10 @@ DB = os.getenv("SUPABASE_DB")
 USER = os.getenv("SUPABASE_USER")
 PASSWORD = os.getenv("SUPABASE_PASSWORD")
 
+print("HOST =", HOST)
+print("USER =", USER)
+print("PASSWORD =", "✅ détecté" if PASSWORD else "❌ manquant")
+
 # Connexion à Supabase Postgres
 conn = psycopg2.connect(
     host=HOST,
