@@ -1,0 +1,4 @@
+datetime
+pandas
+yfinance
+psycopg2-binary

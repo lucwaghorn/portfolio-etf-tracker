@@ -1,0 +1,15 @@
+import yfinance as yf
+
+ticker = yf.Ticker("PNAS.PA")
+data = ticker.history(start="2024-01-01", end="2025-10-01", interval="1d")
+data.to_csv("PNAS_history.csv")
+
+print("✅ Historique exporté dans PNAS_history.csv")
+
+import yfinance as yf
+
+ticker = yf.Ticker("PUST.PA")
+data = ticker.history(start="2024-01-01", end="2025-10-01", interval="1d")
+data.to_csv("PUST_history.csv")
+
+print("✅ Historique exporté dans PUST_history.csv")
