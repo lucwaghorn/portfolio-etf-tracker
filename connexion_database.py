@@ -1,14 +1,18 @@
-import os
 import yfinance as yf
 import psycopg2
 from datetime import datetime
 
+HOST = os.getenv("SUPABASE_HOST")
+DB = os.getenv("SUPABASE_DB")
+USER = os.getenv("SUPABASE_USER")
+PASSWORD = os.getenv("SUPABASE_PASSWORD")
+
 # Connexion à Supabase Postgres
 conn = psycopg2.connect(
-    host=os.getenv("SUPABASE_HOST"),
-    database=os.getenv("SUPABASE_DB"),
-    user=os.getenv("SUPABASE_USER"),
-    password=os.getenv("SUPABASE_PASSWORD"),
+    host=HOST,
+    database=DB,
+    user=USER,
+    password=PASSWORD,
     port="5432"
 )
 
